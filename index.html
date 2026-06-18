@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaua Tech</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    color:#333;
+}
+
+header{
+    background:#0f172a;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+nav{
+    margin-top:10px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+}
+
+.hero{
+    background:linear-gradient(135deg,#2563eb,#06b6d4);
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    background:white;
+    color:#2563eb;
+    padding:12px 24px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+section{
+    padding:60px 10%;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+}
+
+.card{
+    background:white;
+    width:280px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+
+.card h3{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+.contato{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    max-width:600px;
+    margin:auto;
+}
+
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Kaua Tech</h1>
+
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Bem-vindo à Kaua Tech</h1>
+    <p>Soluções em tecnologia, redes e desenvolvimento web.</p>
+    <a href="#contato" class="btn">Fale Conosco</a>
+</section>
+
+<section id="sobre">
+    <h2>Sobre Nós</h2>
+
+    <p style="text-align:center;">
+        Somos uma empresa focada em infraestrutura de TI,
+        segurança de redes e desenvolvimento de soluções web modernas.
+    </p>
+</section>
+
+<section id="servicos">
+    <h2>Nossos Serviços</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Redes</h3>
+            <p>Configuração de switches, roteadores e VLANs.</p>
+        </div>
+
+        <div class="card">
+            <h3>Segurança</h3>
+            <p>Firewall, VPN e proteção de ambientes corporativos.</p>
+        </div>
+
+        <div class="card">
+            <h3>Desenvolvimento</h3>
+            <p>Criação de sites, sistemas e aplicações web.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="contato">
+    <h2>Contato</h2>
+
+    <div class="contato">
+
+        <input type="text" placeholder="Seu nome">
+
+        <input type="email" placeholder="Seu e-mail">
+
+        <textarea rows="5" placeholder="Digite sua mensagem"></textarea>
+
+        <button>Enviar</button>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Kaua Tech - Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
