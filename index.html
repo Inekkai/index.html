@@ -3,106 +3,204 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kaua Tech</title>
+<title>TechNova Solutions</title>
 
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:'Segoe UI',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-    background:#f4f4f4;
+    background:#f5f7fa;
     color:#333;
 }
 
 header{
     background:#0f172a;
     color:white;
-    padding:20px;
-    text-align:center;
+    padding:20px 8%;
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
-nav{
-    margin-top:10px;
+header .topo{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#38bdf8;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin:0 15px;
+    margin-left:20px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#38bdf8;
 }
 
 .hero{
-    background:linear-gradient(135deg,#2563eb,#06b6d4);
+    height:90vh;
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url('https://images.unsplash.com/photo-1518770660439-4636190af475');
+    background-size:cover;
+    background-position:center;
     color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-    padding:80px 20px;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:900px;
 }
 
 .hero h1{
-    font-size:48px;
-    margin-bottom:15px;
+    font-size:60px;
+    margin-bottom:20px;
 }
 
 .hero p{
-    font-size:20px;
+    font-size:22px;
+    margin-bottom:30px;
 }
 
 .btn{
-    display:inline-block;
-    margin-top:20px;
-    background:white;
-    color:#2563eb;
-    padding:12px 24px;
-    border-radius:8px;
+    background:#38bdf8;
+    color:white;
     text-decoration:none;
+    padding:15px 30px;
+    border-radius:8px;
     font-weight:bold;
 }
 
 section{
-    padding:60px 10%;
+    padding:80px 8%;
 }
 
-h2{
+.titulo{
     text-align:center;
-    margin-bottom:30px;
+    margin-bottom:50px;
+    font-size:40px;
+    color:#0f172a;
+}
+
+.sobre{
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+    align-items:center;
+}
+
+.sobre img{
+    width:500px;
+    max-width:100%;
+    border-radius:10px;
+}
+
+.sobre-texto{
+    flex:1;
+}
+
+.sobre-texto p{
+    margin-bottom:15px;
+    line-height:1.8;
 }
 
 .cards{
-    display:flex;
-    flex-wrap:wrap;
-    gap:20px;
-    justify-content:center;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
 }
 
 .card{
     background:white;
-    width:280px;
-    padding:20px;
     border-radius:10px;
-    box-shadow:0 3px 10px rgba(0,0,0,.1);
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
 }
 
 .card h3{
-    color:#2563eb;
+    color:#0f172a;
     margin-bottom:10px;
 }
 
+.preco{
+    color:#2563eb;
+    font-size:24px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.stats{
+    background:#0f172a;
+    color:white;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:30px;
+    text-align:center;
+}
+
+.numero{
+    font-size:48px;
+    color:#38bdf8;
+}
+
 .contato{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+form{
     background:white;
     padding:30px;
     border-radius:10px;
-    max-width:600px;
-    margin:auto;
 }
 
 input, textarea{
     width:100%;
-    padding:10px;
-    margin:10px 0;
+    padding:12px;
+    margin-bottom:15px;
     border:1px solid #ccc;
     border-radius:5px;
 }
@@ -111,88 +209,241 @@ button{
     background:#2563eb;
     color:white;
     border:none;
-    padding:12px 20px;
+    padding:15px;
+    width:100%;
     border-radius:5px;
     cursor:pointer;
 }
 
 footer{
-    background:#0f172a;
+    background:#020617;
     color:white;
     text-align:center;
-    padding:20px;
+    padding:30px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:38px;
+}
+
+.contato{
+    grid-template-columns:1fr;
+}
+
+nav{
+    display:none;
+}
+
 }
 </style>
-</head>
 
+</head>
 <body>
 
 <header>
-    <h1>Kaua Tech</h1>
 
-    <nav>
-        <a href="#sobre">Sobre</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#contato">Contato</a>
-    </nav>
+<div class="topo">
+<div class="logo">Tech<span>Nova</span></div>
+
+<nav>
+<a href="#sobre">Sobre</a>
+<a href="#servicos">Serviços</a>
+<a href="#produtos">Produtos</a>
+<a href="#contato">Contato</a>
+</nav>
+</div>
+
 </header>
 
 <section class="hero">
-    <h1>Bem-vindo à Kaua Tech</h1>
-    <p>Soluções em tecnologia, redes e desenvolvimento web.</p>
-    <a href="#contato" class="btn">Fale Conosco</a>
+
+<div class="hero-content">
+<h1>Soluções Tecnológicas para Empresas Modernas</h1>
+
+<p>
+Infraestrutura, Cloud Computing, Segurança da Informação,
+Redes Corporativas e Equipamentos Profissionais.
+</p>
+
+<a href="#contato" class="btn">Solicitar Orçamento</a>
+
+</div>
+
 </section>
 
 <section id="sobre">
-    <h2>Sobre Nós</h2>
 
-    <p style="text-align:center;">
-        Somos uma empresa focada em infraestrutura de TI,
-        segurança de redes e desenvolvimento de soluções web modernas.
-    </p>
+<h2 class="titulo">Sobre a Empresa</h2>
+
+<div class="sobre">
+
+<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72">
+
+<div class="sobre-texto">
+
+<p>
+A TechNova Solutions atua há mais de 10 anos no mercado de tecnologia,
+fornecendo soluções completas para empresas de pequeno, médio e grande porte.
+</p>
+
+<p>
+Trabalhamos com infraestrutura de redes, servidores,
+firewalls corporativos, monitoramento, virtualização,
+computação em nuvem e desenvolvimento de sistemas.
+</p>
+
+<p>
+Nossa missão é transformar tecnologia em resultados reais para nossos clientes.
+</p>
+
+</div>
+
+</div>
+
 </section>
 
 <section id="servicos">
-    <h2>Nossos Serviços</h2>
 
-    <div class="cards">
+<h2 class="titulo">Nossos Serviços</h2>
 
-        <div class="card">
-            <h3>Redes</h3>
-            <p>Configuração de switches, roteadores e VLANs.</p>
-        </div>
+<div class="cards">
 
-        <div class="card">
-            <h3>Segurança</h3>
-            <p>Firewall, VPN e proteção de ambientes corporativos.</p>
-        </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31">
+<div class="card-content">
+<h3>Infraestrutura de Redes</h3>
+<p>Projeto, instalação e manutenção de redes corporativas.</p>
+</div>
+</div>
 
-        <div class="card">
-            <h3>Desenvolvimento</h3>
-            <p>Criação de sites, sistemas e aplicações web.</p>
-        </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa">
+<div class="card-content">
+<h3>Cloud Computing</h3>
+<p>Migração para nuvem e gerenciamento de ambientes cloud.</p>
+</div>
+</div>
 
-    </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1563986768609-322da13575f3">
+<div class="card-content">
+<h3>Cyber Security</h3>
+<p>Proteção contra ameaças digitais e auditorias de segurança.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="produtos">
+
+<h2 class="titulo">Produtos em Destaque</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+<div class="card-content">
+<h3>Servidor Rack Enterprise</h3>
+<p>Alto desempenho para ambientes corporativos.</p>
+<div class="preco">R$ 18.900</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8">
+<div class="card-content">
+<h3>Firewall Corporativo</h3>
+<p>Proteção avançada para sua rede empresarial.</p>
+<div class="preco">R$ 4.990</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1580894908361-967195033215">
+<div class="card-content">
+<h3>Switch Gerenciável 48 Portas</h3>
+<p>Ideal para redes empresariais de alta disponibilidade.</p>
+<div class="preco">R$ 3.490</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3">
+<div class="card-content">
+<h3>Notebook Corporativo</h3>
+<p>Performance e mobilidade para equipes modernas.</p>
+<div class="preco">R$ 6.299</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="stats-grid">
+
+<div>
+<div class="numero">500+</div>
+<p>Projetos Entregues</p>
+</div>
+
+<div>
+<div class="numero">250+</div>
+<p>Clientes Ativos</p>
+</div>
+
+<div>
+<div class="numero">10+</div>
+<p>Anos de Mercado</p>
+</div>
+
+<div>
+<div class="numero">99%</div>
+<p>Satisfação dos Clientes</p>
+</div>
+
+</div>
+
 </section>
 
 <section id="contato">
-    <h2>Contato</h2>
 
-    <div class="contato">
+<h2 class="titulo">Solicite um Orçamento</h2>
 
-        <input type="text" placeholder="Seu nome">
+<div class="contato">
 
-        <input type="email" placeholder="Seu e-mail">
+<form>
+<input type="text" placeholder="Nome">
+<input type="email" placeholder="E-mail">
+<input type="text" placeholder="Empresa">
+<textarea rows="6" placeholder="Descreva seu projeto"></textarea>
+<button type="submit">Enviar Solicitação</button>
+</form>
 
-        <textarea rows="5" placeholder="Digite sua mensagem"></textarea>
+<div>
+<h3>Informações de Contato</h3>
+<br>
+<p>📍 São Paulo - SP</p>
+<br>
+<p>📞 (11) 99999-9999</p>
+<br>
+<p>✉ contato@technova.com.br</p>
+<br>
+<p>🕒 Segunda a Sexta - 08h às 18h</p>
+</div>
 
-        <button>Enviar</button>
+</div>
 
-    </div>
 </section>
 
 <footer>
-    <p>© 2026 Kaua Tech - Todos os direitos reservados.</p>
+<p>© 2026 TechNova Solutions - Todos os Direitos Reservados</p>
 </footer>
 
 </body>
