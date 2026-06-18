@@ -3,96 +3,78 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TechNova Solutions</title>
+<title>TechNova Enterprise</title>
 
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
-}
-
-html{
-    scroll-behavior:smooth;
+    font-family:Segoe UI, sans-serif;
 }
 
 body{
-    background:#f5f7fa;
+    background:#f4f6f9;
     color:#333;
 }
 
 header{
     background:#0f172a;
     color:white;
-    padding:20px 8%;
+    padding:20px 5%;
     position:sticky;
     top:0;
-    z-index:1000;
 }
 
-header .topo{
+nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
 }
 
-.logo{
-    font-size:28px;
-    font-weight:bold;
+nav ul{
+    display:flex;
+    list-style:none;
 }
 
-.logo span{
-    color:#38bdf8;
+nav ul li{
+    margin-left:20px;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin-left:20px;
-    transition:.3s;
-}
-
-nav a:hover{
-    color:#38bdf8;
 }
 
 .hero{
-    height:90vh;
-    background:
-    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
-    url('https://images.unsplash.com/photo-1518770660439-4636190af475');
+    height:80vh;
+    background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url("https://images.unsplash.com/photo-1518770660439-4636190af475");
     background-size:cover;
     background-position:center;
-    color:white;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:20px;
-}
-
-.hero-content{
-    max-width:900px;
+    color:white;
 }
 
 .hero h1{
     font-size:60px;
-    margin-bottom:20px;
 }
 
 .hero p{
     font-size:22px;
-    margin-bottom:30px;
+    margin:20px 0;
 }
 
 .btn{
-    background:#38bdf8;
+    display:inline-block;
+    background:#2563eb;
     color:white;
-    text-decoration:none;
     padding:15px 30px;
+    text-decoration:none;
     border-radius:8px;
-    font-weight:bold;
 }
 
 section{
@@ -101,31 +83,8 @@ section{
 
 .titulo{
     text-align:center;
-    margin-bottom:50px;
+    margin-bottom:40px;
     font-size:40px;
-    color:#0f172a;
-}
-
-.sobre{
-    display:flex;
-    gap:40px;
-    flex-wrap:wrap;
-    align-items:center;
-}
-
-.sobre img{
-    width:500px;
-    max-width:100%;
-    border-radius:10px;
-}
-
-.sobre-texto{
-    flex:1;
-}
-
-.sobre-texto p{
-    margin-bottom:15px;
-    line-height:1.8;
 }
 
 .cards{
@@ -139,11 +98,6 @@ section{
     border-radius:10px;
     overflow:hidden;
     box-shadow:0 5px 15px rgba(0,0,0,.1);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
 }
 
 .card img{
@@ -156,11 +110,6 @@ section{
     padding:20px;
 }
 
-.card h3{
-    color:#0f172a;
-    margin-bottom:10px;
-}
-
 .preco{
     color:#2563eb;
     font-size:24px;
@@ -168,41 +117,18 @@ section{
     margin-top:10px;
 }
 
-.stats{
-    background:#0f172a;
-    color:white;
-}
-
-.stats-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:30px;
-    text-align:center;
-}
-
-.numero{
-    font-size:48px;
-    color:#38bdf8;
-}
-
-.contato{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-}
-
-form{
+.form-box{
     background:white;
     padding:30px;
     border-radius:10px;
+    max-width:600px;
+    margin:auto;
 }
 
-input, textarea{
+input,textarea,select{
     width:100%;
     padding:12px;
     margin-bottom:15px;
-    border:1px solid #ccc;
-    border-radius:5px;
 }
 
 button{
@@ -211,31 +137,14 @@ button{
     border:none;
     padding:15px;
     width:100%;
-    border-radius:5px;
     cursor:pointer;
 }
 
 footer{
-    background:#020617;
+    background:#0f172a;
     color:white;
     text-align:center;
-    padding:30px;
-}
-
-@media(max-width:768px){
-
-.hero h1{
-    font-size:38px;
-}
-
-.contato{
-    grid-template-columns:1fr;
-}
-
-nav{
-    display:none;
-}
-
+    padding:40px;
 }
 </style>
 
@@ -243,99 +152,36 @@ nav{
 <body>
 
 <header>
-
-<div class="topo">
-<div class="logo">Tech<span>Nova</span></div>
-
 <nav>
-<a href="#sobre">Sobre</a>
-<a href="#servicos">Serviços</a>
-<a href="#produtos">Produtos</a>
-<a href="#contato">Contato</a>
-</nav>
-</div>
+<h2>TechNova Enterprise</h2>
 
+<ul>
+<li><a href="#sobre">Sobre</a></li>
+<li><a href="#produtos">Produtos</a></li>
+<li><a href="#servicos">Serviços</a></li>
+<li><a href="#login">Login</a></li>
+<li><a href="#cadastro">Cadastro</a></li>
+<li><a href="#contato">Contato</a></li>
+</ul>
+</nav>
 </header>
 
 <section class="hero">
-
-<div class="hero-content">
-<h1>Soluções Tecnológicas para Empresas Modernas</h1>
-
-<p>
-Infraestrutura, Cloud Computing, Segurança da Informação,
-Redes Corporativas e Equipamentos Profissionais.
-</p>
-
-<a href="#contato" class="btn">Solicitar Orçamento</a>
-
+<div>
+<h1>Tecnologia para Empresas Modernas</h1>
+<p>Infraestrutura, Cloud, Segurança, Desenvolvimento e Equipamentos.</p>
+<a href="#produtos" class="btn">Ver Catálogo</a>
 </div>
-
 </section>
 
 <section id="sobre">
-
-<h2 class="titulo">Sobre a Empresa</h2>
-
-<div class="sobre">
-
-<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72">
-
-<div class="sobre-texto">
+<h2 class="titulo">Sobre Nós</h2>
 
 <p>
-A TechNova Solutions atua há mais de 10 anos no mercado de tecnologia,
-fornecendo soluções completas para empresas de pequeno, médio e grande porte.
+A TechNova Enterprise é uma empresa especializada em infraestrutura,
+cloud computing, cibersegurança, desenvolvimento de software,
+equipamentos corporativos e consultoria tecnológica.
 </p>
-
-<p>
-Trabalhamos com infraestrutura de redes, servidores,
-firewalls corporativos, monitoramento, virtualização,
-computação em nuvem e desenvolvimento de sistemas.
-</p>
-
-<p>
-Nossa missão é transformar tecnologia em resultados reais para nossos clientes.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="servicos">
-
-<h2 class="titulo">Nossos Serviços</h2>
-
-<div class="cards">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31">
-<div class="card-content">
-<h3>Infraestrutura de Redes</h3>
-<p>Projeto, instalação e manutenção de redes corporativas.</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa">
-<div class="card-content">
-<h3>Cloud Computing</h3>
-<p>Migração para nuvem e gerenciamento de ambientes cloud.</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1563986768609-322da13575f3">
-<div class="card-content">
-<h3>Cyber Security</h3>
-<p>Proteção contra ameaças digitais e auditorias de segurança.</p>
-</div>
-</div>
-
-</div>
-
 </section>
 
 <section id="produtos">
@@ -347,27 +193,27 @@ Nossa missão é transformar tecnologia em resultados reais para nossos clientes
 <div class="card">
 <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
 <div class="card-content">
-<h3>Servidor Rack Enterprise</h3>
-<p>Alto desempenho para ambientes corporativos.</p>
+<h3>Servidor Corporativo</h3>
+<p>Alta disponibilidade para empresas.</p>
 <div class="preco">R$ 18.900</div>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8">
-<div class="card-content">
-<h3>Firewall Corporativo</h3>
-<p>Proteção avançada para sua rede empresarial.</p>
-<div class="preco">R$ 4.990</div>
 </div>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1580894908361-967195033215">
 <div class="card-content">
-<h3>Switch Gerenciável 48 Portas</h3>
-<p>Ideal para redes empresariais de alta disponibilidade.</p>
-<div class="preco">R$ 3.490</div>
+<h3>Switch 48 Portas</h3>
+<p>Rede corporativa profissional.</p>
+<div class="preco">R$ 3.990</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8">
+<div class="card-content">
+<h3>Firewall Empresarial</h3>
+<p>Proteção avançada.</p>
+<div class="preco">R$ 5.490</div>
 </div>
 </div>
 
@@ -375,7 +221,7 @@ Nossa missão é transformar tecnologia em resultados reais para nossos clientes
 <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3">
 <div class="card-content">
 <h3>Notebook Corporativo</h3>
-<p>Performance e mobilidade para equipes modernas.</p>
+<p>Desempenho e mobilidade.</p>
 <div class="preco">R$ 6.299</div>
 </div>
 </div>
@@ -384,28 +230,153 @@ Nossa missão é transformar tecnologia em resultados reais para nossos clientes
 
 </section>
 
-<section class="stats">
+<section id="servicos">
 
-<div class="stats-grid">
+<h2 class="titulo">Serviços</h2>
 
-<div>
-<div class="numero">500+</div>
-<p>Projetos Entregues</p>
+<div class="cards">
+
+<div class="card">
+<div class="card-content">
+<h3>Cloud Computing</h3>
+<p>Migração para nuvem.</p>
+</div>
 </div>
 
-<div>
-<div class="numero">250+</div>
-<p>Clientes Ativos</p>
+<div class="card">
+<div class="card-content">
+<h3>Cyber Security</h3>
+<p>Proteção de ambientes corporativos.</p>
+</div>
 </div>
 
-<div>
-<div class="numero">10+</div>
-<p>Anos de Mercado</p>
+<div class="card">
+<div class="card-content">
+<h3>Desenvolvimento Web</h3>
+<p>Sistemas, APIs e aplicações.</p>
+</div>
 </div>
 
-<div>
-<div class="numero">99%</div>
-<p>Satisfação dos Clientes</p>
+<div class="card">
+<div class="card-content">
+<h3>Consultoria de TI</h3>
+<p>Planejamento tecnológico.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="login">
+
+<h2 class="titulo">Área do Cliente</h2>
+
+<div class="form-box">
+
+<form>
+
+<input type="email" placeholder="E-mail">
+
+<input type="password" placeholder="Senha">
+
+<button>Entrar</button>
+
+</form>
+
+</div>
+
+</section>
+
+<section id="cadastro">
+
+<h2 class="titulo">Criar Conta</h2>
+
+<div class="form-box">
+
+<form>
+
+<input type="text" placeholder="Nome Completo">
+
+<input type="email" placeholder="E-mail">
+
+<input type="text" placeholder="Empresa">
+
+<input type="password" placeholder="Senha">
+
+<select>
+<option>Cliente</option>
+<option>Parceiro</option>
+<option>Fornecedor</option>
+</select>
+
+<button>Cadastrar</button>
+
+</form>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="titulo">Planos Empresariais</h2>
+
+<div class="cards">
+
+<div class="card">
+<div class="card-content">
+<h3>Starter</h3>
+<p>Pequenas empresas.</p>
+<div class="preco">R$ 299/mês</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-content">
+<h3>Business</h3>
+<p>Médias empresas.</p>
+<div class="preco">R$ 999/mês</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-content">
+<h3>Enterprise</h3>
+<p>Grandes corporações.</p>
+<div class="preco">Sob consulta</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="titulo">Depoimentos</h2>
+
+<div class="cards">
+
+<div class="card">
+<div class="card-content">
+<p>"Excelente atendimento e suporte."</p>
+<b>João Silva</b>
+</div>
+</div>
+
+<div class="card">
+<div class="card-content">
+<p>"Nossa infraestrutura ficou muito mais segura."</p>
+<b>Maria Costa</b>
+</div>
+</div>
+
+<div class="card">
+<div class="card-content">
+<p>"Equipe extremamente profissional."</p>
+<b>Carlos Oliveira</b>
+</div>
 </div>
 
 </div>
@@ -414,36 +385,38 @@ Nossa missão é transformar tecnologia em resultados reais para nossos clientes
 
 <section id="contato">
 
-<h2 class="titulo">Solicite um Orçamento</h2>
+<h2 class="titulo">Contato</h2>
 
-<div class="contato">
+<div class="form-box">
 
 <form>
-<input type="text" placeholder="Nome">
-<input type="email" placeholder="E-mail">
-<input type="text" placeholder="Empresa">
-<textarea rows="6" placeholder="Descreva seu projeto"></textarea>
-<button type="submit">Enviar Solicitação</button>
-</form>
 
-<div>
-<h3>Informações de Contato</h3>
-<br>
-<p>📍 São Paulo - SP</p>
-<br>
-<p>📞 (11) 99999-9999</p>
-<br>
-<p>✉ contato@technova.com.br</p>
-<br>
-<p>🕒 Segunda a Sexta - 08h às 18h</p>
-</div>
+<input type="text" placeholder="Nome">
+
+<input type="email" placeholder="E-mail">
+
+<textarea rows="6" placeholder="Mensagem"></textarea>
+
+<button>Enviar</button>
+
+</form>
 
 </div>
 
 </section>
 
 <footer>
-<p>© 2026 TechNova Solutions - Todos os Direitos Reservados</p>
+
+<h3>TechNova Enterprise</h3>
+
+<p>Infraestrutura • Cloud • Segurança • Desenvolvimento</p>
+
+<p>contato@technova.com.br</p>
+
+<p>(11) 99999-9999</p>
+
+<p>© 2026 Todos os Direitos Reservados</p>
+
 </footer>
 
 </body>
